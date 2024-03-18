@@ -1,0 +1,163 @@
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.AssemblyInfoInputs.cache
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.AssemblyInfo.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.csproj.CoreCompileInputs.cache
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.MvcApplicationPartsAssemblyInfo.cache
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorAssemblyInfo.cache
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorAssemblyInfo.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.TagHelpers.input.cache
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.TagHelpers.output.cache
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorCoreGenerate.cache
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Admin\UserList.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorTargetAssemblyInfo.cache
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorTargetAssemblyInfo.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.dll
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\refint\LanguageClient.dll
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.pdb
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\bin\Debug\net5.0\appsettings.Development.json
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\bin\Debug\net5.0\appsettings.json
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.exe
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.deps.json
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.runtimeconfig.json
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.runtimeconfig.dev.json
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.dll
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.pdb
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.Views.dll
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.Views.pdb
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.Views.pdb
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\scopedcss\bundle\LanguageClient.styles.css
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\LanguageClient.StaticWebAssets.Manifest.cache
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\LanguageClient.StaticWebAssets.Pack.cache
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\msbuild.LanguageClient.Microsoft.AspNetCore.StaticWebAssets.props
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\msbuild.build.LanguageClient.props
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.LanguageClient.props
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.LanguageClient.props
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.genruntimeconfig.cache
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\ref\LanguageClient.dll
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Language.E08D7EA5.Up2Date
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Admin\Feedback.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\AccountsAnalysis.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\AllChart.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\LanguagesAnalysis.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\ScreensAnalysis.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\TranslationAnalysis.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\UsersAnalysis.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Login\Login.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\OpinionsHub\Rating.cshtml.g.cs
+D:\DA-Flutter\Test_group\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Admin\Rates.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\bin\Debug\net5.0\appsettings.json
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.exe
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.deps.json
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.runtimeconfig.json
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.runtimeconfig.dev.json
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.dll
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.pdb
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.Views.dll
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.Views.pdb
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.AssemblyInfoInputs.cache
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.AssemblyInfo.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.csproj.CoreCompileInputs.cache
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorAssemblyInfo.cache
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorAssemblyInfo.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\scopedcss\bundle\LanguageClient.styles.css
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\LanguageClient.StaticWebAssets.Manifest.cache
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\LanguageClient.StaticWebAssets.Pack.cache
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\msbuild.LanguageClient.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\msbuild.build.LanguageClient.props
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.LanguageClient.props
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.LanguageClient.props
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.TagHelpers.input.cache
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.TagHelpers.output.cache
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorCoreGenerate.cache
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Admin\Feedback.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Admin\Rates.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Admin\UserList.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\AccountsAnalysis.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\AllChart.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\LanguagesAnalysis.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\ScreensAnalysis.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\TranslationAnalysis.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\UsersAnalysis.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Login\Login.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\OpinionsHub\Rating.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorTargetAssemblyInfo.cache
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorTargetAssemblyInfo.cs
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.Views.pdb
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.dll
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\refint\LanguageClient.dll
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.pdb
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.genruntimeconfig.cache
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\ref\LanguageClient.dll
+C:\Users\PC\Downloads\New folder\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.csproj.CopyComplete
+F:\AD\LanguageClient\LanguageClient\LanguageClient\bin\Debug\net5.0\appsettings.Development.json
+F:\AD\LanguageClient\LanguageClient\LanguageClient\bin\Debug\net5.0\appsettings.json
+F:\AD\LanguageClient\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.exe
+F:\AD\LanguageClient\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.deps.json
+F:\AD\LanguageClient\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.runtimeconfig.json
+F:\AD\LanguageClient\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.runtimeconfig.dev.json
+F:\AD\LanguageClient\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.dll
+F:\AD\LanguageClient\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.pdb
+F:\AD\LanguageClient\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.Views.dll
+F:\AD\LanguageClient\LanguageClient\LanguageClient\bin\Debug\net5.0\LanguageClient.Views.pdb
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.csproj.AssemblyReference.cache
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.GeneratedMSBuildEditorConfig.editorconfig
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.AssemblyInfoInputs.cache
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.AssemblyInfo.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.csproj.CoreCompileInputs.cache
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.MvcApplicationPartsAssemblyInfo.cache
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorAssemblyInfo.cache
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorAssemblyInfo.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\scopedcss\bundle\LanguageClient.styles.css
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\LanguageClient.StaticWebAssets.Manifest.cache
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\LanguageClient.StaticWebAssets.Pack.cache
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\msbuild.LanguageClient.Microsoft.AspNetCore.StaticWebAssets.props
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\msbuild.build.LanguageClient.props
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.LanguageClient.props
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.LanguageClient.props
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.TagHelpers.input.cache
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.TagHelpers.output.cache
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorCoreGenerate.cache
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Admin\Feedback.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Admin\Rates.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Admin\UserList.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\AccountsAnalysis.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\AllChart.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\LanguagesAnalysis.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\ScreensAnalysis.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\TranslationAnalysis.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Charts\UsersAnalysis.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Login\Login.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\OpinionsHub\Rating.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorTargetAssemblyInfo.cache
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.RazorTargetAssemblyInfo.cs
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.Views.pdb
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.dll
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\refint\LanguageClient.dll
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.pdb
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.genruntimeconfig.cache
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\ref\LanguageClient.dll
+F:\AD\LanguageClient\LanguageClient\LanguageClient\obj\Debug\net5.0\LanguageClient.csproj.CopyComplete

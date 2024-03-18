@@ -1,0 +1,394 @@
+﻿@page
+@model LanguageClient.Pages.Charts.AllChartModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+@using Microsoft.AspNetCore.Http
+
+@{
+    // Lấy token từ session
+    var accessToken = HttpContext.Session.GetString("AccessToken");
+}
+@*<p>Access Token: @accessToken</p>
+*@
+  <!-- partial -->
+            <!-- partial:../../partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <div class="d-flex sidebar-profile">
+                            <div class="sidebar-profile-image">
+                                <img src="../assets/images/faces/face29.png" alt="image">
+                                <span class="sidebar-status-indicator"></span>
+                            </div>
+                            <div class="sidebar-profile-name">
+                                <p class="sidebar-name">
+                                    Kenneth Osborne
+                                </p>
+                                <p class="sidebar-designation">
+                                    Welcome
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <p class="sidebar-menu-title mt-3">Menu</p>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Index">
+                            <i class="typcn typcn-device-desktop menu-icon"></i>
+                            <span class="menu-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Admin/UserList">
+                            <i class="typcn typcn-user-outline menu-icon"></i>
+                            <span class="menu-title">User List</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Admin/Feedback">
+                            <i class="typcn typcn-message-typing menu-icon"></i>
+                            <span class="menu-title">Feedback</span>
+                        </a>
+                    </li>
+                            <li class="nav-item">
+            <a class="nav-link" asp-page="/Admin/Rates">
+                <i class="typcn typcn-star-full-outline menu-icon"></i>
+                <span class="menu-title">Favorites List</span>
+            </a>
+        </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" data-toggle="collapse" asp-page="#charts" aria-expanded="false"
+                            aria-controls="charts">
+                            <i class="typcn typcn-chart-bar-outline menu-icon"></i>
+                            <span class="menu-title">Overview Statistics</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        
+                    </li>
+                   <div class="collapse" id="charts">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" asp-page="/Charts/AccountsAnalysis">Accounts
+                                        Analysis</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-page="/Charts/UsersAnalysis">Users
+                                        Analysis</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-page="/Charts/LanguagesAnalysis">Languages
+                                        Analysis</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-page="/Charts/ScreensAnalysis">Screens
+                                        Analysis</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-page="/Charts/TranslationAnalysis">Translations
+                                        Analysis</a></li>
+                            </ul>
+                        </div>
+                </ul>
+            </nav>
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="row">
+                        <div class="col-lg-12 grid-margin stretch-card">
+                            <div class="card feedback_list_container">
+                                <div class="card-body">
+                                    <h4 class="card-title">Feedbacks Table</h4>
+                                    <p class="card-description">
+                                        List of all feedback about Free Languages app.
+                                    </p>
+                                    <div class="card text-dark">
+                                        <div class="card-body p-3">
+                                            <div class="d-flex flex-start">
+
+                                                <img class="rounded-circle shadow-1-strong me-3"
+                                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(23).webp"
+                                                    alt="avatar" width="60" height="60" />
+                                                <div class=" ml-3">
+                                                    <h3 class="fw-bold mb-1">Maggie Marsh <label
+                                                            class="badge bg-primary label_page">Weather</label></h3>
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <p class="mb-0 text-black-50">
+                                                            March 07, 2021
+                                                        </p>
+
+                                                    </div>
+                                                    <p class="mb-0 limit-text">
+                                                        Lorem Ipsum is simply dummy text of the
+                                                        printing and typesetting
+                                                        industry. Lorem Ipsum has been the
+                                                        industry's standard dummy text ever
+                                                        since the 1500s, when an unknown printer
+                                                        took a galley of type and
+                                                        scrambled it.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr class="my-0" />
+
+                                        <div class="card-body p-4">
+                                            <div class="d-flex flex-start">
+                                                <img class="rounded-circle shadow-1-strong me-3"
+                                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp"
+                                                    alt="avatar" width="60" height="60" />
+                                                <div class=" ml-3">
+                                                    <h3 class="fw-bold mb-1">Maggie Marsh <label
+                                                            class="badge bg-primary label_page bg-success">News</label>
+                                                    </h3>
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <p class="mb-0 text-black-50">
+                                                            March 15, 2021
+                                                        </p>
+
+                                                    </div>
+                                                    <p class="mb-0 limit-text">
+                                                        Contrary to popular belief, Lorem Ipsum
+                                                        is not simply random text. It
+                                                        has roots in a piece of classical Latin
+                                                        literature from 45 BC, making it
+                                                        over 2000 years old. Richard McClintock,
+                                                        a Latin professor at
+                                                        Hampden-Sydney College in Virginia,
+                                                        looked up one of the more obscure
+                                                        Latin words, consectetur, from a Lorem
+                                                        Ipsum passage, and going through
+                                                        the cites.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr class="my-0" style="height: 1px;" />
+
+                                        <div class="card-body p-4">
+                                            <div class="d-flex flex-start">
+                                                <img class="rounded-circle shadow-1-strong me-3"
+                                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(33).webp"
+                                                    alt="avatar" width="60" height="60" />
+                                                <div class=" ml-3">
+                                                    <h3 class="fw-bold mb-1">Maggie Marsh <label
+                                                            class="badge bg-primary label_page bg-danger">Chatbot</label>
+                                                    </h3>
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <p class="mb-0 text-black-50">
+                                                            March 24, 2021
+                                                        </p>
+
+                                                    </div>
+                                                    <p class="mb-0 limit-text">
+                                                        There are many variations of passages of
+                                                        Lorem Ipsum available, but the
+                                                        majority have suffered alteration in
+                                                        some form, by injected humour, or
+                                                        randomised words which don't look even
+                                                        slightly believable. If you are
+                                                        going to use a passage of Lorem Ipsum,
+                                                        you need to be sure.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr class="my-0" />
+
+                                        <div class="card-body p-4">
+                                            <div class="d-flex flex-start">
+                                                <img class="rounded-circle shadow-1-strong me-3"
+                                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(24).webp"
+                                                    alt="avatar" width="60" height="60" />
+                                                <div class=" ml-3">
+                                                    <h3 class="fw-bold mb-1">Maggie Marsh <label
+                                                            class="badge bg-primary label_page bg-primary">Translate</label>
+                                                    </h3>
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <p class="mb-0 text-black-50">
+                                                            March 30, 2021
+                                                        </p>
+
+                                                    </div>
+                                                    <p class="mb-0 limit-text">
+                                                        It uses a dictionary of over 200 Latin
+                                                        words, combined with a handful of
+                                                        model sentence structures, to generate
+                                                        Lorem Ipsum which looks
+                                                        reasonable. The generated Lorem Ipsum is
+                                                        therefore always free from
+                                                        repetition, injected humour, or
+                                                        non-characteristic words etc.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-body p-4">
+                                            <div class="d-flex flex-start">
+                                                <img class="rounded-circle shadow-1-strong me-3"
+                                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(33).webp"
+                                                    alt="avatar" width="60" height="60" />
+                                                <div class=" ml-3">
+                                                    <h3 class="fw-bold mb-1">Maggie Marsh <label
+                                                            class="badge bg-primary label_page bg-danger">Chatbot</label>
+                                                    </h3>
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <p class="mb-0 text-black-50">
+                                                            March 24, 2021
+                                                        </p>
+
+                                                    </div>
+                                                    <p class="mb-0 limit-text">
+                                                        There are many variations of passages of
+                                                        Lorem Ipsum available, but the
+                                                        majority have suffered alteration in
+                                                        some form, by injected humour, or
+                                                        randomised words which don't look even
+                                                        slightly believable. If you are
+                                                        going to use a passage of Lorem Ipsum,
+                                                        you need to be sure.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr class="my-0" />
+
+                                        <div class="card-body p-4">
+                                            <div class="d-flex flex-start">
+                                                <img class="rounded-circle shadow-1-strong me-3"
+                                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(33).webp"
+                                                    alt="avatar" width="60" height="60" />
+                                                <div class=" ml-3">
+                                                    <h3 class="fw-bold mb-1">Maggie Marsh <label
+                                                            class="badge bg-primary label_page bg-danger">Chatbot</label>
+                                                    </h3>
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <p class="mb-0 text-black-50">
+                                                            March 24, 2021
+                                                        </p>
+
+                                                    </div>
+                                                    <p class="mb-0 limit-text">
+                                                        There are many variations of passages of
+                                                        Lorem Ipsum available, but the
+                                                        majority have suffered alteration in
+                                                        some form, by injected humour, or
+                                                        randomised words which don't look even
+                                                        slightly believable. If you are
+                                                        going to use a passage of Lorem Ipsum,
+                                                        you need to be sure.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr class="my-0" />
+
+                                        <div class="card-body p-4">
+                                            <div class="d-flex flex-start">
+                                                <img class="rounded-circle shadow-1-strong me-3"
+                                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(33).webp"
+                                                    alt="avatar" width="60" height="60" />
+                                                <div class=" ml-3">
+                                                    <h3 class="fw-bold mb-1">Maggie Marsh <label
+                                                            class="badge bg-primary label_page bg-danger">Chatbot</label>
+                                                    </h3>
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <p class="mb-0 text-black-50">
+                                                            March 24, 2021
+                                                        </p>
+
+                                                    </div>
+                                                    <p class="mb-0 limit-text">
+                                                        There are many variations of passages of
+                                                        Lorem Ipsum available, but the
+                                                        majority have suffered alteration in
+                                                        some form, by injected humour, or
+                                                        randomised words which don't look even
+                                                        slightly believable. If you are
+                                                        going to use a passage of Lorem Ipsum,
+                                                        you need to be sure.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr class="my-0" />
+
+                                        <div class="card-body p-4">
+                                            <div class="d-flex flex-start">
+                                                <img class="rounded-circle shadow-1-strong me-3"
+                                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(33).webp"
+                                                    alt="avatar" width="60" height="60" />
+                                                <div class=" ml-3">
+                                                    <h3 class="fw-bold mb-1">Maggie Marsh <label
+                                                            class="badge bg-primary label_page bg-danger">Chatbot</label>
+                                                    </h3>
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <p class="mb-0 text-black-50">
+                                                            March 24, 2021
+                                                        </p>
+
+                                                    </div>
+                                                    <p class="mb-0 limit-text">
+                                                        There are many variations of passages of
+                                                        Lorem Ipsum available, but the
+                                                        majority have suffered alteration in
+                                                        some form, by injected humour, or
+                                                        randomised words which don't look even
+                                                        slightly believable. If you are
+                                                        going to use a passage of Lorem Ipsum,
+                                                        you need to be sure.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr class="my-0" />
+
+                                        <div class="card-body p-4">
+                                            <div class="d-flex flex-start">
+                                                <img class="rounded-circle shadow-1-strong me-3"
+                                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(33).webp"
+                                                    alt="avatar" width="60" height="60" />
+                                                <div class=" ml-3">
+                                                    <h3 class="fw-bold mb-1">Maggie Marsh <label
+                                                            class="badge bg-primary label_page bg-danger">Chatbot</label>
+                                                    </h3>
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <p class="mb-0 text-black-50">
+                                                            March 24, 2021
+                                                        </p>
+
+                                                    </div>
+                                                    <p class="mb-0 limit-text">
+                                                        There are many variations of passages of
+                                                        Lorem Ipsum available, but the
+                                                        majority have suffered alteration in
+                                                        some form, by injected humour, or
+                                                        randomised words which don't look even
+                                                        slightly believable. If you are
+                                                        going to use a passage of Lorem Ipsum,
+                                                        you need to be sure.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- content-wrapper ends -->
+                <!-- partial:../../partials/_footer.html -->
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © <a asp-page="#"
+                                target="_blank">bootstrapdash.com</a> 2020</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Free <a asp-page="#"
+                                target="_blank">Bootstrap dashboard </a>templates
+                            from
+                            Bootstrapdash.com</span>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->

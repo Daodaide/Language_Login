@@ -1,0 +1,730 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!-- partial -->
+<!-- partial:partials/_sidebar.html -->
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item">
+            <div class="d-flex sidebar-profile">
+                <div class="sidebar-profile-image">
+                    <img src="~/assets/images/faces/face29.png" alt="image">
+                    <span class="sidebar-status-indicator"></span>
+                </div>
+                <div class="sidebar-profile-name">
+                    <p class="sidebar-name">
+                        Kenneth Osborne
+                    </p>
+                    <p class="sidebar-designation">
+                        Welcome
+                    </p>
+                </div>
+            </div>
+            
+            <p class="sidebar-menu-title mt-3">Menu</p>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" asp-page="/Index">
+                <i class="typcn typcn-device-desktop menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-page="/Admin/UserList">
+                <i class="typcn typcn-user-outline menu-icon"></i>
+                <span class="menu-title">User List</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-page="/Admin/Feedback">
+                <i class="typcn typcn-message-typing menu-icon"></i>
+                <span class="menu-title">Feedback</span>
+            </a>
+        </li>
+           <li class="nav-item">
+            <a class="nav-link" asp-page="/Admin/Rates">
+                <i class="typcn typcn-star-full-outline menu-icon"></i>
+                <span class="menu-title">Favorites List</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" asp-page="#charts" aria-expanded="false"
+               aria-controls="charts">
+                <i class="typcn typcn-chart-bar-outline menu-icon"></i>
+                <span class="menu-title">Overview Statistics</span>
+                <i class="menu-arrow"></i>
+            </a>
+            
+        </li>
+       <div class="collapse" id="charts">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           asp-page="/Charts/AccountsAnalysis">
+                            Accounts
+                            Analysis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           asp-page="/Charts/UsersAnalysis">
+                            Users
+                            Analysis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           asp-page="/Charts/LanguagesAnalysis">
+                            Languages
+                            Analysis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           asp-page="/Charts/ScreensAnalysis">
+                            Screens
+                            Analysis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           asp-page="/Charts/TranslationAnalysis">
+                            Translations
+                            Analysis
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </ul>
+</nav>
+<!-- partial -->
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3 class="mb-0 font-weight-bold">Kenneth Osborne</h3>
+                <p class="mt-2">Your last login: 21h ago from newzealand.</p>
+            </div>
+            <div class="col-sm-6">
+                <div class="d-flex align-items-center justify-content-md-end">
+                    <div class="mb-3 mb-xl-0 pr-1">
+                        <div class="dropdown">
+                            <button class="btn bg-white btn-sm dropdown-toggle btn-icon-text border mr-2"
+                                    type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                <i class="typcn typcn-calendar-outline mr-2"></i>Last 7 days
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3"
+                                 data-x-placement="top-start">
+                                <h6 class="dropdown-header">Last 14 days</h6>
+                                <a class="dropdown-item" asp-page="#">Last 21 days</a>
+                                <a class="dropdown-item" asp-page="#">Last 28 days</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr-1 mb-3 mb-xl-0">
+                        <button type="button" class="btn btn-sm bg-white btn-icon-text border">
+                            <i class="typcn typcn-info-large-outline mr-2"></i>info
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row  mt-3">
+            <div class="col-xl-5 d-flex grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <h4 class="card-title mb-3">Sessions by Channel</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div id="circleProgress6" class="progressbar-js-circle rounded p-3" data-progress="0.50">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <ul class="session-by-channel-legend">
+                                            <li>
+                                                <div>Firewalls(3)</div>
+                                                <div>4(100%)</div>
+                                            </li>
+                                            <li>
+                                                <div>Ports(12)</div>
+                                                <div>12(100%)</div>
+                                            </li>
+                                            <li>
+                                                <div>Servers(233)</div>
+                                                <div>2(100%)</div>
+                                            </li>
+                                            <li>
+                                                <div>Firewalls(3)</div>
+                                                <div>7(100%)</div>
+                                            </li>
+                                            <li>
+                                                <div>Firewalls(3)</div>
+                                                <div>6(70%)</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 d-flex grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <h4 class="card-title mb-3">Events</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="d-flex justify-content-between mb-md-5 mt-3" data-critical="Critical" data-error="Error" data-warning="Warning">
+                                    <div class="small">Critical</div>
+                                    <div class="text-danger small">Error</div>
+                                    <div class="text-warning small">Warning</div>
+                                </div>
+                                <canvas id="eventChart"
+                                        data-labels="Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
+                                        data-critical-data="00,35,15,45,35,40,25,44,20,30,38,15"
+                                        data-error-data="00,45,25,55,45,30,35,54,30,20,48,25"
+                                        data-warning-data="00,55,35,65,55,40,45,64,40,30,58,35"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 d-flex grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <h4 class="card-title mb-3">Device stats</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div>Uptime</div>
+                                            <div class="text-muted">195 Days, 8 hours</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div>First Seen</div>
+                                            <div class="text-muted">23 Sep 2019, 2.04PM</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div>Collected time</div>
+                                            <div class="text-muted">23 Sep 2019, 2.04PM</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div>Memory space</div>
+                                            <div class="text-muted">168.3GB</div>
+                                        </div>
+                                        <div class="progress progress-md mt-4">
+                                            <div class="progress-bar bg-success" role="progressbar"
+                                                 style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                                                 aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 d-flex grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <h4 class="card-title mb-3">Sessions by Channel</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div class="font-weight-medium">Empolyee Name</div>
+                                            <div class="font-weight-medium">This Month</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div class="text-secondary font-weight-medium">
+                                                Connor Chandler
+                                            </div>
+                                            <div class="small">$ 4909</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div class="text-secondary font-weight-medium">
+                                                Russell Floyd
+                                            </div>
+                                            <div class="small">$857</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div class="text-secondary font-weight-medium">
+                                                Douglas White
+                                            </div>
+                                            <div class="small">$612 </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div class="text-secondary font-weight-medium">
+                                                Alta Fletcher
+                                            </div>
+                                            <div class="small">$233</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div class="text-secondary font-weight-medium">
+                                                Marguerite
+                                                Pearson
+                                            </div>
+                                            <div class="small">$233</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div class="text-secondary font-weight-medium">
+                                                Leonard Gutierrez
+                                            </div>
+                                            <div class="small">$35</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div class="text-secondary font-weight-medium">
+                                                Helen Benson
+                                            </div>
+                                            <div class="small">$43</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="text-secondary font-weight-medium">
+                                                Helen Benson
+                                            </div>
+                                            <div class="small">$43</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 d-flex grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <h4 class="card-title mb-3">Sales Analytics</h4>
+                            <button type="button" class="btn btn-sm btn-light">Month</button>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-md-flex mb-4">
+                                    <div class="mr-md-5 mb-4">
+                                        <h5 class="mb-1">
+                                            <i class="typcn typcn-globe-outline mr-1"></i>Online
+                                        </h5>
+                                        <h2 class="text-primary mb-1 font-weight-bold">23,342</h2>
+                                    </div>
+                                    <div class="mr-md-5 mb-4">
+                                        <h5 class="mb-1">
+                                            <i class="typcn typcn-archive mr-1"></i>Offline
+                                        </h5>
+                                        <h2 class="text-secondary mb-1 font-weight-bold">13,221</h2>
+                                    </div>
+                                    <div class="mr-md-5 mb-4">
+                                        <h5 class="mb-1"><i class="typcn typcn-tags mr-1"></i>Marketing</h5>
+                                        <h2 class="text-warning mb-1 font-weight-bold">1,542</h2>
+                                    </div>
+                                </div>
+                                <canvas id="salesanalyticChart"
+                                        data-labels="Feb,Mar,Apr,May,Jun,Jul,Aug"
+                                        data-critical-data="24,23,22,24,26,23,01"
+                                        data-warning-data="26,27,26,22,25,26,01"
+                                        data-error-data="25,28,24,28,29,27,01"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 d-flex grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <h4 class="card-title mb-3">Card Title</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mb-5">
+                                    <div class="mr-1">
+                                        <div class="text-info mb-1">
+                                            Total Earning
+                                        </div>
+                                        <h2 class="mb-2 mt-2 font-weight-bold">287,493$</h2>
+                                        <div class="font-weight-bold">
+                                            1.4% Since Last Month
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="mr-1">
+                                        <div class="text-info mb-1">
+                                            Total Earning
+                                        </div>
+                                        <h2 class="mb-2 mt-2  font-weight-bold">87,493</h2>
+                                        <div class="font-weight-bold">
+                                            5.43% Since Last Month
+                                        </div>
+                                    </div>
+                                </div>
+                                <canvas id="barChartStacked"
+                                        data-labels="jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec"
+                                        data-safari-data="10,20,15,30,20,10,20,15,30,20,10,01"
+                                        data-chrome-data="5,25,10,20,30,5,25,10,20,30,25,10"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 d-flex grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <h4 class="card-title mb-3">E-Commerce Analytics</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div class="d-sm-flex justify-content-between">
+                                    <div class="dropdown">
+                                        <button class="btn bg-white btn-sm dropdown-toggle btn-icon-text pl-0"
+                                                type="button" id="dropdownMenuSizeButton4"
+                                                data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                            Mon,1 Oct 2019 - Tue,2 Oct 2019
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton4"
+                                             data-x-placement="top-start">
+                                            <h6 class="dropdown-header">
+                                                Mon,17 Oct 2019 - Tue,25 Oct 2019
+                                            </h6>
+                                            <a class="dropdown-item" asp-page="#">
+                                                Tue,18 Oct 2019 - Wed,26 Oct
+                                                2019
+                                            </a>
+                                            <a class="dropdown-item" asp-page="#">
+                                                Wed,19 Oct 2019 - Thu,26 Oct
+                                                2019
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn btn-sm btn-light mr-2">Day</button>
+                                        <button type="button"
+                                                class="btn btn-sm btn-light mr-2">
+                                            Week
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-light">Month</button>
+                                    </div>
+                                </div>
+                                <div class="chart-container mt-4">
+                                    <canvas id="ecommerceAnalytic"
+                                            data-labels="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,
+                    22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,
+                    41,42,43,44,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,
+                    19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,
+                    38,39,40,41"
+                                            data-critical-values="56,56,55,59,59,59,57,56,57,54,56,58,57,59,58,59,
+                               57,55,56,54,52,52,50,50,50,52,48,49,50,52,53,52,
+                               55,54,53,56,55,56,55,54,55,57,58,56,55,56,57,58,
+                               59,58,57,55,53,52,55,57,55,54,52,55,57,56,57,58,
+                               59,58,59,57,56,55,57,58,59,60,62,60,59,58,57,56,
+                               57,56,58,59"
+                                            data-warning-values="32,32,35,39,39,39,37,36,37,34,36,38,37,39,38,39,
+                              37,35,36,34,30,28,31,29,27,24,23,26,25,27,28,29,
+                              32,30,33,31,35,34,32,35,37,35,36,34,30,28,28,28,
+                              32,29,33,35,33,32,35,37,35,34,32,35,37,36,37,38,
+                              39,38,39,37,36,35,37,38,39,36,37,35,39,38,37,36,
+                              37,36,38,39"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="text-success font-weight-bold">Inbound</div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="font-weight-medium">Current</div>
+                                        <div class="text-muted">38.34M</div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="font-weight-medium">Average</div>
+                                        <div class="text-muted">38.34M</div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="font-weight-medium">Maximum</div>
+                                        <div class="text-muted">68.14M</div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="font-weight-medium">60th %</div>
+                                        <div class="text-muted">168.3GB</div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="mt-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="text-success font-weight-bold">Outbound</div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="font-weight-medium">Current</div>
+                                        <div class="text-muted">458.77M</div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="font-weight-medium">Average</div>
+                                        <div class="text-muted">1.45K</div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="font-weight-medium">Maximum</div>
+                                        <div class="text-muted">15.50K</div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="font-weight-medium">60th %</div>
+                                        <div class="text-muted">45.5</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 d-flex grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <h4 class="card-title mb-3">Sale Analysis Trend</h4>
+                        </div>
+                        <div class="mt-2">
+                            <div class="d-flex justify-content-between">
+                                <small>Order Value</small>
+                                <small>155.5%</small>
+                            </div>
+                            <div class="progress progress-md  mt-2">
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%"
+                                     aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="d-flex justify-content-between">
+                                <small>Total Products</small>
+                                <small>238.2%</small>
+                            </div>
+                            <div class="progress progress-md  mt-2">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%"
+                                     aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mt-4 mb-5">
+                            <div class="d-flex justify-content-between">
+                                <small>Quantity</small>
+                                <small>23.30%</small>
+                            </div>
+                            <div class="progress progress-md mt-2">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 70%"
+                                     aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <canvas id="salesTopChart" data-labels="Feb 1,Feb 2,Feb 3,Feb 4,Feb 5,Feb 6,Feb 7,Feb 8,Feb 9,Feb 10,Feb 11,Feb 12,Feb 13,Feb 14,Feb 15,Feb 16,Feb 17,Feb 18,Feb 19,Feb 20,Feb 21,Feb 22,Feb 23,Feb 24,Feb 25,Feb 26,Feb 27,Feb 28,Mar 1,Mar 2,Mar 3,Mar 4,Mar 5,Mar 6,Mar 7,Mar 8,Mar 9,Mar 10" data-values="80,79,78,65,77,68,63,73,58,46,60,65,74,72,63,54,55,64,34,46,34,35,24,64,34,23,13,54,27,43,34,43,64,50,43,55,39,43"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 d-flex grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <h4 class="card-title mb-3">Project status</h4>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="img-sm rounded-circle mb-md-0 mr-2"
+                                                     src="~/assets/images/faces/face30.png"
+                                                     alt="profile image">
+                                                <div>
+                                                    <div> Company</div>
+                                                    <div class="font-weight-bold mt-1">volkswagen</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Budget
+                                            <div class="font-weight-bold  mt-1">$2322 </div>
+                                        </td>
+                                        <td>
+                                            Status
+                                            <div class="font-weight-bold text-success  mt-1">88% </div>
+                                        </td>
+                                        <td>
+                                            Deadline
+                                            <div class="font-weight-bold  mt-1">07 Nov 2019</div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm btn-secondary">
+                                                edit
+                                                actions
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="img-sm rounded-circle mb-md-0 mr-2"
+                                                     src="~/assets/images/faces/face31.png"
+                                                     alt="profile image">
+                                                <div>
+                                                    <div> Company</div>
+                                                    <div class="font-weight-bold  mt-1">Land Rover</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Budget
+                                            <div class="font-weight-bold  mt-1">$12022 </div>
+                                        </td>
+                                        <td>
+                                            Status
+                                            <div class="font-weight-bold text-success  mt-1">70% </div>
+                                        </td>
+                                        <td>
+                                            Deadline
+                                            <div class="font-weight-bold  mt-1">08 Nov 2019</div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm btn-secondary">
+                                                edit
+                                                actions
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="img-sm rounded-circle mb-md-0 mr-2"
+                                                     src="~/assets/images/faces/face32.png"
+                                                     alt="profile image">
+                                                <div>
+                                                    <div> Company</div>
+                                                    <div class="font-weight-bold  mt-1">Bentley </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Budget
+                                            <div class="font-weight-bold  mt-1">$8,725</div>
+                                        </td>
+                                        <td>
+                                            Status
+                                            <div class="font-weight-bold text-success  mt-1">87% </div>
+                                        </td>
+                                        <td>
+                                            Deadline
+                                            <div class="font-weight-bold  mt-1">11 Jun 2019</div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm btn-secondary">
+                                                edit
+                                                actions
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="img-sm rounded-circle mb-md-0 mr-2"
+                                                     src="~/assets/images/faces/face33.png"
+                                                     alt="profile image">
+                                                <div>
+                                                    <div> Company</div>
+                                                    <div class="font-weight-bold  mt-1">Morgan </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Budget
+                                            <div class="font-weight-bold  mt-1">$5,220 </div>
+                                        </td>
+                                        <td>
+                                            Status
+                                            <div class="font-weight-bold text-success  mt-1">65% </div>
+                                        </td>
+                                        <td>
+                                            Deadline
+                                            <div class="font-weight-bold  mt-1">26 Oct 2019</div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm btn-secondary">
+                                                edit
+                                                actions
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="img-sm rounded-circle mb-md-0 mr-2"
+                                                     src="~/assets/images/faces/face34.png"
+                                                     alt="profile image">
+                                                <div>
+                                                    <div> Company</div>
+                                                    <div class="font-weight-bold  mt-1">volkswagen</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Budget
+                                            <div class="font-weight-bold  mt-1">$2322 </div>
+                                        </td>
+                                        <td>
+                                            Status
+                                            <div class="font-weight-bold text-success mt-1">88% </div>
+                                        </td>
+                                        <td>
+                                            Deadline
+                                            <div class="font-weight-bold  mt-1">07 Nov 2019</div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm btn-secondary">
+                                                edit
+                                                actions
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content-wrapper ends -->
+    <!-- partial:partials/_footer.html -->
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-center text-sm-left d-block d-sm-inline-block">
+                Copyright © <a asp-page="https://www.bootstrapdash.com" target="_blank">bootstrapdash.com</a> 2020
+            </span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+                Free <a asp-page="https://www.bootstrapdash.com" target="_blank">Bootstrap dashboard </a>templates
+                from
+                Bootstrapdash.com
+            </span>
+        </div>
+    </footer>
+    <!-- partial -->
+</div>
+<!-- main-panel ends -->

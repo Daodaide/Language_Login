@@ -1,0 +1,291 @@
+﻿@page
+@model LanguageClient.Pages.Admin.UserListModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+@using Microsoft.AspNetCore.Http
+
+@{
+    // Lấy token từ session
+    var accessToken = HttpContext.Session.GetString("AccessToken");
+}
+@*<p>Access Token: @accessToken</p>*@
+
+<!-- partial -->
+<!-- partial:~/~/partials/_sidebar.html -->
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item">
+            <div class="d-flex sidebar-profile">
+                <div class="sidebar-profile-image">
+                    <img src="~/assets/images/faces/face29.png" alt="image">
+                    <span class="sidebar-status-indicator"></span>
+                </div>
+                <div class="sidebar-profile-name">
+                    <p class="sidebar-name">
+                        Kenneth Osborne
+                    </p>
+                    <p class="sidebar-designation">
+                        Welcome
+                    </p>
+                </div>
+            </div>
+           
+            <p class="sidebar-menu-title mt-3">Menu</p>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-page="/Index">
+                <i class="typcn typcn-device-desktop menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" asp-page="/Admin/UserList">
+                <i class="typcn typcn-user-outline menu-icon"></i>
+                <span class="menu-title">User List</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-page="/Admin/Feedback">
+                <i class="typcn typcn-message-typing menu-icon"></i>
+                <span class="menu-title">Feedback</span>
+            </a>
+        </li>
+                <li class="nav-item">
+            <a class="nav-link" href="/Admin/Rates/">
+                <i class="typcn typcn-star-full-outline menu-icon"></i>
+                <span class="menu-title">Favorites List</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false"
+               aria-controls="charts">
+                <i class="typcn typcn-chart-bar-outline menu-icon"></i>
+                <span class="menu-title">Overview Statistics</span>
+                <i class="menu-arrow"></i>
+            </a>
+         
+        </li>
+          <div class="collapse" id="charts">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link"
+                        asp-page="/Charts/AccountsAnalysis">
+                            Accounts
+                            Analysis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                        asp-page="/Charts/UsersAnalysis">
+                            Users
+                            Analysis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                        asp-page="/Charts/LanguagesAnalysis">
+                            Languages
+                            Analysis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                        asp-page="/Charts/ScreensAnalysis">
+                            Screens
+                            Analysis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           asp-page="/Charts/TranslationAnalysis">
+                            Translations
+                            Analysis
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </ul>
+</nav>
+<!-- partial -->
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Users Table</h4>
+                        <p class="card-description">
+                            List of all Language Free app users.
+                        </p>
+                        <div class="table-responsive" style="padding-top: 1rem;">
+                            <table id="multi_col_order"
+                                   class="table table-striped table-bordered display no-wrap" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Full Name</th>
+                                     
+                                        <th>Birthday</th>
+                                    
+                                        <th>Gender</th>
+                                        <th>National</th>
+                                        <th class="ele-block"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                       @foreach (var user in Model.Users)
+                                    {
+                                        <tr>
+                                            <td> <img src="http://api-languagefree.cosplane.asia/api/Image/@user.ImageUser" alt="User Image" /></td>
+                                            <td>@user.FullName</td>
+                                            <td>@user.DateOfBirth.ToString("MMMM dd, yyyy")</td>
+                                            <td>@user.Gender</td>
+                                            <td>@user.National</td>
+                                            <td>
+                                                <a href="#details_user_Modal" data-toggle="modal" data-target="#userDetailsModal_@user.UserId">
+                                                    <i class="mdi mdi-file-find icon_details_user"></i>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="mdi mdi-close-circle icon_delete_user"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+ function closeModal(userId) {
+    var modal = document.getElementById('userDetailsModal_' + userId);
+    if (modal) {
+        modal.classList.remove('show');
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+        modal.setAttribute('aria-modal', 'false');
+    }
+}
+</script>
+    @foreach (var user in Model.Users)
+    {
+        <!-- Modal -->
+        <div class="modal fade" id="userDetailsModal_@user.UserId" tabindex="-1" role="dialog" aria-labelledby="userDetailsModalLabel_@user.UserId"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                   <span class="button_close_modal" onclick="closeModal('@user.UserId')"><i class="mdi mdi-close-circle-outline"></i></span>
+                    <div class="row">
+                        <div class="col-md-2 border-right">
+                            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                                <img class="rounded-circle mt-5" width="150px"
+                                    src="http://api-languagefree.cosplane.asia/api/Image/@user.ImageUser"><span class="font-weight-bold">@user.FullName</span><span class="text-black-50">@user.Email</span><span> </span> @*Cho tên và email ở đây nữa post ảnh ở đây nữa nè*@
+                            </div>
+                        </div>
+                        <div class="col-md-5 border-right" style="   flex: 0 0 74.66667%;
+    max-width: 126.66667%;">
+                            <div class="p-3 py-5">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="text-right font-weight-bold">Profile Settings</h4>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label class="labels label_detail">
+                                            User ID
+                                        </label><input type="text" class="form-control"
+                                                       value="@user.UserId" readonly>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="labels label_detail">
+                                            Full Name
+                                        </label><input type="text" class="form-control"
+                                                           value="@user.FullName" readonly>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="labels label_detail">Phone Number</label><input type="text"
+                                                                                               class="form-control" readonly value="@user.Phone">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="labels label_detail">Email</label><input type="text"
+                                                                                               class="form-control" readonly value="@user.Email">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="labels label_detail">
+                                            Birthday
+                                        </label><input type="text" class="form-control"
+                                                       readonly value="@user.DateOfBirth.ToString("MMMM dd, yyyy")">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="labels label_detail">Gender</label><input type="text"
+                                                                                                class="form-control" readonly value="@user.Gender">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="labels label_detail">Nationality</label><input type="text" class="form-control" readonly
+                                                                                                     value="@user.National">
+                                    </div>
+                                </div>
+                                @* <div class="mt-3 text-center">
+                                    <button class="btn btn-primary profile-button"
+                                            type="button">
+                                        Save
+                                        Profile
+                                    </button>
+                                </div> *@
+                            </div>
+                        </div>
+              @*           <div class="col-md-5">
+                            <div class="p-3 py-5">
+                                <div class="col-md-12">
+                                    <label class="labels label_detail">
+                                        Access
+                                        Time
+                                    </label><input type="text" class="form-control"
+                                                   placeholder="Access time" value="" readonly>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="labels label_detail">
+                                        Favourite
+                                        Feature
+                                    </label><input type="text" class="form-control"
+                                                   placeholder="Favourite feature" value="" readonly>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="labels label_detail">
+                                        App
+                                        Review
+                                    </label><input type="text" class="form-control"
+                                                   placeholder="App Review" value="" readonly>
+                                </div>
+                            </div>
+                        </div>
+                   *@  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+    <!-- content-wrapper ends -->
+    <!-- partial:~/~/partials/_footer.html -->
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-center text-sm-left d-block d-sm-inline-block">
+                Copyright © <a href="#"
+                               target="_blank">bootstrapdash.com</a> 2020
+            </span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+                Free <a href="#"
+                        target="_blank">Bootstrap dashboard </a>templates
+                from
+                Bootstrapdash.com
+            </span>
+        </div>
+    </footer>
+    <!-- partial -->
+</div>
+<!-- main-panel ends -->

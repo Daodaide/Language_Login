@@ -1,0 +1,341 @@
+﻿@* <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - LanguageClient</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">LanguageClient</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - LanguageClient - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+ *@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Language Free Admin</title>
+
+    <!-- ==============FRAMEWORK, LIBRARY================ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="~/assets/vendors/">
+    <link rel="stylesheet" href="~/assets/vendors/typicons.font/font/typicons.css">
+    <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="~/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <!-- ==============STYLE================ -->
+    <link rel="stylesheet" href="~/style/style.css">
+    <link rel="stylesheet" href="~/style/setup.css">
+    <link rel="stylesheet" href="~/style/userlist.css">
+    <link rel="stylesheet" href="~/style/feedback.css">
+    <link rel="stylesheet" href="~/style/dashboard.css">
+    <link rel="stylesheet" href="~/style/allchart.css">
+    <link href="~/js/javascript/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <link rel="shortcut icon" href="~/assets/images/logo/logo.png" type="image/x-icon">
+
+  @RenderSection("Scripts", required: false)
+</head>
+<script>
+    $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+            $(".navbar-brand").toggleClass("logo-expanded");
+            $(".logo-new").toggle(); // Hiển thị hoặc ẩn hình mới khi nhấp vào nút toggler
+        });
+    });
+</script>
+<style>
+    .logo-expanded img {
+        display: none;
+    }
+
+    .logo-expanded .brand-logo {
+        display: none;
+    }
+
+    .logo-expanded .brand-logo-mini {
+        display: block;
+    }
+
+</style>
+<body>
+    <div class="container-scroller">
+        <!-- partial:~/~/partials/_navbar.html -->
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo" asp-page="/Index">
+                    <img src="~/assets/images/logo/logo_cochu.png" alt="logo" />
+                </a>
+                <a class="logo-new" asp-page="/Index" style="display: none;">
+                    <img src="~/assets/images/logo/logo.png" alt="logo" />
+                </a>
+                <button class="navbar-toggler navbar-toggler align-self-center d-none d-lg-flex" type="button"
+                        data-toggle="minimize" title="Toggle Navigation">
+                    <i class="typcn typcn-th-menu"></i>
+                </button>
+            </div>
+                    <style>
+                        input#birthday {
+                            border-radius: 0.5rem;
+                            width: 8rem;
+                            max-width: 100rem;
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+                            color: white;
+                            border: 3px solid #193978;
+                            background: #193978;
+                        }
+                        input[type="date"]::-webkit-calendar-picker-indicator {
+                            filter: invert(1);
+                            
+                        }
+                    </style>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <ul class="navbar-nav mr-lg-2">
+                     <li class="nav-item  d-none d-lg-flex">
+                      <input type="date" id="birthday" name="birthday" value="@DateTime.Now.ToString("yyyy-MM-dd")">
+                    </li>
+                  @*  <li class="nav-item  d-none d-lg-flex">
+                        <a class="nav-link active" href="#">
+                            Statistic
+                        </a>
+                    </li>
+                    <li class="nav-item  d-none d-lg-flex">
+                        <a class="nav-link" href="#">
+                            Employee
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item d-none d-lg-flex  mr-2">
+                        <a class="nav-link" href="#">
+                            Help
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown d-flex">
+                        <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
+                           id="messageDropdown" href="#" data-toggle="dropdown">
+                            <i class="typcn typcn-message-typing"></i>
+                            <span class="count bg-success">2</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                             aria-labelledby="messageDropdown">
+                            <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <img src="~/assets/images/faces/face4.jpg" alt="image" class="profile-pic">
+                                </div>
+                                <div class="preview-item-content flex-grow">
+                                    <h6 class="preview-subject ellipsis font-weight-normal">
+                                        David Grey
+                                    </h6>
+                                    <p class="font-weight-light small-text mb-0">
+                                        The meeting is cancelled
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <img src="~/assets/images/faces/face2.jpg" alt="image" class="profile-pic">
+                                </div>
+                                <div class="preview-item-content flex-grow">
+                                    <h6 class="preview-subject ellipsis font-weight-normal">
+                                        Tim Cook
+                                    </h6>
+                                    <p class="font-weight-light small-text mb-0">
+                                        New product launch
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <img src="~/assets/images/faces/face3.jpg" alt="image" class="profile-pic">
+                                </div>
+                                <div class="preview-item-content flex-grow">
+                                    <h6 class="preview-subject ellipsis font-weight-normal">
+                                        Johnson
+                                    </h6>
+                                    <p class="font-weight-light small-text mb-0">
+                                        Upcoming board meeting
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown  d-flex">
+                        <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center"
+                           id="notificationDropdown" href="#" data-toggle="dropdown">
+                            <i class="typcn typcn-bell mr-0"></i>
+                            <span class="count bg-danger">2</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                             aria-labelledby="notificationDropdown">
+                            <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-success">
+                                        <i class="typcn typcn-info-large mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                                    <p class="font-weight-light small-text mb-0">
+                                        Just now
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-warning">
+                                        <i class="typcn typcn-cog mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal">Settings</h6>
+                                    <p class="font-weight-light small-text mb-0">
+                                        Private message
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-info">
+                                        <i class="typcn typcn-user-outline mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                                    <p class="font-weight-light small-text mb-0">
+                                        2 days ago
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </li> *@
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle  pl-0 pr-0" asp-page="#" data-toggle="dropdown"
+                           id="profileDropdown">
+                            <i class="typcn typcn-user-outline mr-0"></i>
+                            <span class="nav-profile-name">Evan Morales</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                             aria-labelledby="profileDropdown">
+                            <a class="dropdown-item" asp-page="">
+                                <i class="typcn typcn-cog text-primary"></i>
+                                Settings
+                            </a>
+                            <a class="dropdown-item" asp-page="/Login/Login">
+                                <i class="typcn typcn-power text-primary"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                        data-toggle="offcanvas">
+                    <span class="typcn typcn-th-menu"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:~/~/partials/_settings-panel.html -->
+            <div class="theme-setting-wrapper">
+                <div id="settings-trigger"><i class="typcn typcn-cog-outline"></i></div>
+                <div id="theme-settings" class="settings-panel">
+                    <i class="settings-close typcn typcn-delete-outline"></i>
+                    <p class="settings-heading">SIDEBAR SKINS</p>
+                    <div class="sidebar-bg-options" id="sidebar-light-theme">
+                        <div class="img-ss rounded-circle bg-light border mr-3"></div>
+                        Light
+                    </div>
+                    <div class="sidebar-bg-options selected" id="sidebar-dark-theme">
+                        <div class="img-ss rounded-circle bg-dark border mr-3"></div>
+                        Dark
+                    </div>
+                    <p class="settings-heading mt-2">HEADER SKINS</p>
+                    <div class="color-tiles mx-0 px-4">
+                        <div class="tiles success"></div>
+                        <div class="tiles warning"></div>
+                        <div class="tiles danger"></div>
+                        <div class="tiles primary"></div>
+                        <div class="tiles info"></div>
+                        <div class="tiles dark"></div>
+                        <div class="tiles default border"></div>
+                    </div>
+                </div>
+            </div>
+            
+            @RenderBody()
+
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <script src="~/assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="~/js/javascript/off-canvas.js"></script>
+    <script src="~/js/javascript/hoverable-collapse.js"></script>
+    <script src="~/js/javascript/template.js"></script>
+    <script src="~/js/javascript/settings.js"></script>
+    <script src="~/js/javascript/todolist.js"></script>
+    <script src="~/js/javascript/javascript_for_pages/userlist.js"></script>
+    <script src="~/assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="~/assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="~/js/javascript/javascript_for_pages/dashboard.js"></script>
+    <script src="~/js/javascript/chart.js"></script>
+    <script src="~/assets/vendors//template.js"></script>
+    <script src="~/assets/vendors//settings.js"></script>
+    <script src="~/assets/vendors//todolist.js"></script>
+    <script src="~/js/javascript/javascript_for_pages/feedback.js"></script>
+    <script src="~/js/javascript/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/javascript/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="~/js/datatable/datatable-basic.init.js"></script>
+    <script src="~/js/javascript/javascript_for_pages/allchart.js"></script>
+</body>
+
+</html>

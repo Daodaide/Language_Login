@@ -1,0 +1,166 @@
+﻿@page
+@model LanguageClient.Pages.Charts.UsersAnalysisModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+@using Microsoft.AspNetCore.Http
+
+@{
+    var accessToken = HttpContext.Session.GetString("AccessToken");
+}
+<!-- partial -->
+<!-- partial:../../partials/_sidebar.html -->
+@*<p>Access Token: @accessToken</p>*@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item">
+            <div class="d-flex sidebar-profile">
+                <div class="sidebar-profile-image">
+                    <img src="~/assests/images/faces/face29.png" alt="image">
+                    <span class="sidebar-status-indicator"></span>
+                </div>
+                <div class="sidebar-profile-name">
+                    <p class="sidebar-name">
+                        Kenneth Osborne
+                    </p>
+                    <p class="sidebar-designation">
+                        Welcome
+                    </p>
+                </div>
+            </div>
+            
+            <p class="sidebar-menu-title mt-3">Menu</p>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-page="/Index">
+                <i class="typcn typcn-device-desktop menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-page="/Admin/UserList">
+                <i class="typcn typcn-user-outline menu-icon"></i>
+                <span class="menu-title">User List</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-page="/Admin/Feedback">
+                <i class="typcn typcn-message-typing menu-icon"></i>
+                <span class="menu-title">Feedback</span>
+            </a>
+        </li>
+                <li class="nav-item">
+            <a class="nav-link" asp-page="/Admin/Rates">
+                <i class="typcn typcn-star-full-outline menu-icon"></i>
+                <span class="menu-title">Favorites List</span>
+            </a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" data-toggle="collapse" asp-page="#charts" aria-expanded="false"
+               aria-controls="charts">
+                <i class="typcn typcn-chart-bar-outline menu-icon"></i>
+                <span class="menu-title">Overview Statistics</span>
+                <i class="menu-arrow"></i>
+            </a>
+           
+        </li>
+         <div class="collapse" id="charts">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           asp-page="/Charts/AccountsAnalysis">
+                            Accounts
+                            Analysis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           asp-page="/Charts/UsersAnalysis" style="color: #fff;">
+                            Users
+                            Analysis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           asp-page="/Charts/LanguagesAnalysis">
+                            Languages
+                            Analysis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           asp-page="/Charts/ScreensAnalysis">
+                            Screens
+                            Analysis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           asp-page="/Charts/TranslationAnalysis">
+                            Translations
+                            Analysis
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </ul>
+</nav>
+<!-- partial -->
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">User Gender</h4>
+                        <canvas id="barChart_User_Gender" data-chart-data='{"labels":["Female", "Male", "User Specified"],"datasets":[{"label":"Gender","data":[60,35,5]}]}'></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">User Age</h4>
+                        <canvas id="barChart_User_Age" data-chart-data='{"labels":["7-25","26-35","36-45","46-55","56+"],"datasets":[{"label":"Age Distribution","data":[30,40,20,5,5]}]}'></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">User Comes From</h4>
+                        <canvas id="barChart_User_Comes_From" data-chart-data='{"labels":["India", "Viet Nam", "Germany", "Finland", "South Korea", "Other"],"datasets":[{"data":[37.2, 25.6, 17.4, 7.9, 6.8, 5.1]}]}'></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">User Goes To</h4>
+                        <canvas id="barChart_User_Goes_To" data-chart-data='{"labels":["Thailand","China","Sinagepore","Australia","Viet Nam","Other"],"datasets":[{"data":[48.2, 36.9, 8.1, 4, 2.8]}]}'></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content-wrapper ends -->
+    <!-- partial:../../partials/_footer.html -->
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-center text-sm-left d-block d-sm-inline-block">
+                Copyright © <a asp-page="#"
+                               target="_blank">bootstrapdash.com</a> 2020
+            </span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+                Free <a asp-page="#"
+                        target="_blank">Bootstrap dashboard </a>templates
+                from Bootstrapdash.com
+            </span>
+        </div>
+    </footer>
+    <!-- partial -->
+</div>
+<!-- main-panel ends -->
